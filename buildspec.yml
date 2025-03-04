@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18 # Use the appropriate Node.js version for your Strapi project
+      nodejs: 18
     commands:
       - echo "Installing dependencies..."
       - npm install
@@ -11,15 +11,16 @@ phases:
   build:
     commands:
       - echo "Building Strapi..."
-      - npm run build  # This generates the admin panel assets
+      - npm run build  
 
   post_build:
     commands:
-      - echo "Build complete. Preparing for deployment..."
-      - cp -r ./ ./deploy  # Copy everything to a deployment folder (optional)
-      - echo "Strapi build and assets are ready."
+      - echo "Preparing deploy directory..."
+      - mkdir -p deploy
+      - rsync -av --progress --exclude=deploy ./ deploy
+      - echo "Build ready for deployment."
 
 artifacts:
   files:
     - "**/*"
-  base-directory: "deploy"  # Change this to "." if deploying the whole repo
+  base-directory: "deploy"
