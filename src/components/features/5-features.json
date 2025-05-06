@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_features_5_features",
+  "info": {
+    "displayName": "5 Features",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pre_headline": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "sub_header": {
+      "type": "string"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    },
+    "three_col_features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.feature-image-card"
+    },
+    "two_col_features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.feature-image-card-2"
+    }
+  }
+}

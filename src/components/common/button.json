@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_common_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean"
+    },
+    "link": {
+      "type": "string"
+    },
+    "button_id": {
+      "type": "string"
+    },
+    "button_class": {
+      "type": "string"
+    }
+  }
+}

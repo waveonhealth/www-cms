@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_ctas_cta_stacked_buttons",
+  "info": {
+    "displayName": "CTA Stacked Buttons",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.button"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

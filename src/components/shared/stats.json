@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_stats",
+  "info": {
+    "displayName": "Stats",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "statistic": {
+      "type": "string"
+    },
+    "subtext": {
+      "type": "string"
+    }
+  }
+}

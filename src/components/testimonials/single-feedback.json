@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_testimonials_single_feedbacks",
+  "info": {
+    "displayName": "Single Feedback",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "feedback": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feedback.feedback"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

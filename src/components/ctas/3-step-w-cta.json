@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_ctas_3_step_w_ctas",
+  "info": {
+    "displayName": "3 Step wCTA",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.icon-cards"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.button"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

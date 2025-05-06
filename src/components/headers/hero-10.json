@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_headers_hero_10s",
+  "info": {
+    "displayName": "Hero 10",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "header_line1": {
+      "type": "string"
+    },
+    "header_line2": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.button"
+    },
+    "main_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "benefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.icon-cards"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

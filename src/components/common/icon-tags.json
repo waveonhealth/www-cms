@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_common_icon_tags",
+  "info": {
+    "displayName": "Icon Tags",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "tag_name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_testimonials_single_feedback_images",
+  "info": {
+    "displayName": "Single Feedback - Image",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "feedback": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feedback.feedback"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_text": {
+      "type": "string"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.button"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_features_alternating_cards",
+  "info": {
+    "displayName": "Alternating Cards",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "benefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.image-cards"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.button"
+    },
+    "subtext": {
+      "type": "string"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

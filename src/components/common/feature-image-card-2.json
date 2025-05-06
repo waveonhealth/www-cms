@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_common_feature_image_card_2s",
+  "info": {
+    "displayName": "feature_image_card_2"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.button"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

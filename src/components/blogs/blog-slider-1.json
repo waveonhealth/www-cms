@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_blogs_blog_slider_1s",
+  "info": {
+    "displayName": "Blog Slider 1",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pre_headline": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "sub_header": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.button"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_common_feature_image_cards",
+  "info": {
+    "displayName": "feature_image_card",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.button"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

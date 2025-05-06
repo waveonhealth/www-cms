@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_features_feature_blocks",
+  "info": {
+    "displayName": "feature_blocks",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pre_headline": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.button"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.icon-cards"
+    }
+  }
+}

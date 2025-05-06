@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_facts_facts_1s",
+  "info": {
+    "displayName": "Facts 1",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "facts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stats"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.button"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

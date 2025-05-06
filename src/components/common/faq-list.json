@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_common_faq_lists",
+  "info": {
+    "displayName": "FAQ List",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.button"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

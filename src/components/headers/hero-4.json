@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_headers_hero_4s",
+  "info": {
+    "displayName": "Hero 4",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.button"
+    },
+    "subtext": {
+      "type": "string"
+    },
+    "main_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "image_position": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ]
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    },
+    "slider": {
+      "displayName": "image_slider",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.image-slider"
+    }
+  }
+}

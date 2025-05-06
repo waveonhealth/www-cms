@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_features_feature_icon_lists",
+  "info": {
+    "displayName": "Feature Icon List",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.icon-tags"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}
