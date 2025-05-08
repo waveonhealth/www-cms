@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "modules": {
+      "type": "dynamiczone",
+      "components": [
+        "headers.header-4",
+        "features.5-features",
+        "features.feature-blocks",
+        "testimonials.testimonial-slider-1",
+        "blog.blog-slider-1",
+        "ctas.cta-centered-buttons"
+      ]
+    }
+  }
+}

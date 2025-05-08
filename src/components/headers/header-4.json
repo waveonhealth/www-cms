@@ -1,7 +1,7 @@
 {
   "collectionName": "components_headers_header_4s",
   "info": {
-    "displayName": "Header 4",
+    "displayName": "Hero-5",
     "icon": "dashboard",
     "description": ""
   },
@@ -9,9 +9,6 @@
   "attributes": {
     "headline": {
       "type": "string"
-    },
-    "description": {
-      "type": "blocks"
     },
     "main_image": {
       "type": "media",
@@ -50,6 +47,9 @@
       "type": "component",
       "repeatable": true,
       "component": "common.button"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

@@ -1,7 +1,7 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface BlogsBlogSlider1 extends Struct.ComponentSchema {
-  collectionName: 'components_blogs_blog_slider_1s';
+export interface BlogBlogSlider1 extends Struct.ComponentSchema {
+  collectionName: 'components_blog_blog_slider_1s';
   info: {
     description: '';
     displayName: 'Blog Slider 1';
@@ -190,7 +190,7 @@ export interface Features5Features extends Struct.ComponentSchema {
   collectionName: 'components_features_5_features';
   info: {
     description: '';
-    displayName: '5 Features';
+    displayName: 'features-8';
     icon: 'apps';
   };
   attributes: {
@@ -229,7 +229,7 @@ export interface FeaturesFeatureBlocks extends Struct.ComponentSchema {
   collectionName: 'components_features_feature_blocks';
   info: {
     description: '';
-    displayName: 'feature_blocks';
+    displayName: 'features2-8';
     icon: 'apps';
   };
   attributes: {
@@ -263,12 +263,12 @@ export interface HeadersHeader4 extends Struct.ComponentSchema {
   collectionName: 'components_headers_header_4s';
   info: {
     description: '';
-    displayName: 'Header 4';
+    displayName: 'Hero-5';
     icon: 'dashboard';
   };
   attributes: {
     buttons: Schema.Attribute.Component<'common.button', true>;
-    description: Schema.Attribute.Blocks;
+    description: Schema.Attribute.Text;
     headline: Schema.Attribute.String;
     left_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
@@ -399,6 +399,22 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSocialProof extends Struct.ComponentSchema {
+  collectionName: 'components_shared_social_proofs';
+  info: {
+    displayName: 'Social Proof';
+    icon: 'bulletList';
+  };
+  attributes: {
+    headline: Schema.Attribute.String;
+    logos: Schema.Attribute.Component<'shared.image-slider', true>;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    rating: Schema.Attribute.Decimal;
+    subtext: Schema.Attribute.String;
+  };
+}
+
 export interface SharedStats extends Struct.ComponentSchema {
   collectionName: 'components_shared_stats';
   info: {
@@ -460,7 +476,7 @@ export interface TestimonialsTestimonialSlider1 extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'blogs.blog-slider-1': BlogsBlogSlider1;
+      'blog.blog-slider-1': BlogBlogSlider1;
       'common.button': CommonButton;
       'common.faq-list': CommonFaqList;
       'common.feature-image-card': CommonFeatureImageCard;
@@ -485,6 +501,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.social-proof': SharedSocialProof;
       'shared.stats': SharedStats;
       'testimonials.single-feedback': TestimonialsSingleFeedback;
       'testimonials.single-feedback-image': TestimonialsSingleFeedbackImage;

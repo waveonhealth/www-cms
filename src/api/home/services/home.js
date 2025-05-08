@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * privacy service
+ * home service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::privacy.privacy');
+module.exports = createCoreService('api::home.home');

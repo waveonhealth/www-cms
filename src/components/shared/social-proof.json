@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_social_proofs",
+  "info": {
+    "displayName": "Social Proof",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "subtext": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "logos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.image-slider"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}
