@@ -409,6 +409,45 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAthleteAthlete extends Struct.SingleTypeSchema {
+  collectionName: 'athletes';
+  info: {
+    description: '';
+    displayName: 'Athlete';
+    pluralName: 'athletes';
+    singularName: 'athlete';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::athlete.athlete'
+    > &
+      Schema.Attribute.Private;
+    page: Schema.Attribute.DynamicZone<
+      [
+        'headers.hero-10',
+        'ctas.3-step-w-cta',
+        'features.alternating-cards',
+        'testimonials.single-feedback',
+        'features.feature-icon-list',
+        'common.faq-list',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   collectionName: 'authors';
   info: {
@@ -1176,6 +1215,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::article.article': ApiArticleArticle;
+      'api::athlete.athlete': ApiAthleteAthlete;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::feedback.feedback': ApiFeedbackFeedback;

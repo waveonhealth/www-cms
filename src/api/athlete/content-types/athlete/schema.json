@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "athletes",
+  "info": {
+    "singularName": "athlete",
+    "pluralName": "athletes",
+    "displayName": "Athlete",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "dynamiczone",
+      "components": [
+        "headers.hero-10",
+        "ctas.3-step-w-cta",
+        "features.alternating-cards",
+        "testimonials.single-feedback",
+        "features.feature-icon-list",
+        "common.faq-list"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}
