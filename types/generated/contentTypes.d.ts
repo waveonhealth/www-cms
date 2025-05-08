@@ -448,6 +448,48 @@ export interface ApiAthleteAthlete extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAthleticTrainerAthleticTrainer
+  extends Struct.SingleTypeSchema {
+  collectionName: 'athletic_trainers';
+  info: {
+    description: '';
+    displayName: 'Athletic Trainer';
+    pluralName: 'athletic-trainers';
+    singularName: 'athletic-trainer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::athletic-trainer.athletic-trainer'
+    > &
+      Schema.Attribute.Private;
+    page: Schema.Attribute.DynamicZone<
+      [
+        'headers.hero-4',
+        'facts.facts-1',
+        'features.alternating-cards',
+        'ctas.cta-stacked-buttons',
+        'testimonials.single-feedback-image',
+        'common.faq-list',
+        'blog.blog-slider-1',
+        'ctas.cta-centered-buttons',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   collectionName: 'authors';
   info: {
@@ -1216,6 +1258,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::article.article': ApiArticleArticle;
       'api::athlete.athlete': ApiAthleteAthlete;
+      'api::athletic-trainer.athletic-trainer': ApiAthleticTrainerAthleticTrainer;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::feedback.feedback': ApiFeedbackFeedback;
