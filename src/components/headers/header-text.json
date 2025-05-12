@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_headers_header_texts",
+  "info": {
+    "displayName": "Header Text",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "pre_headline": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.button"
+    },
+    "module_iid": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

@@ -81,10 +81,15 @@ export interface CommonFeatureImageCard2 extends Struct.ComponentSchema {
 export interface CommonIconCards extends Struct.ComponentSchema {
   collectionName: 'components_common_icon_cards';
   info: {
+    description: '';
     displayName: 'icon_cards';
     icon: 'apps';
   };
   attributes: {
+    background_color: Schema.Attribute.Enumeration<
+      ['green', 'white', 'black', 'tan']
+    >;
+    button: Schema.Attribute.Component<'common.button', false>;
     description: Schema.Attribute.String;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     link: Schema.Attribute.String;
@@ -259,6 +264,25 @@ export interface FeaturesFeatureIconList extends Struct.ComponentSchema {
   };
 }
 
+export interface FormsContact1 extends Struct.ComponentSchema {
+  collectionName: 'components_forms_contact_1s';
+  info: {
+    displayName: 'Contact 1';
+    icon: 'apps';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'common.button', false>;
+    description: Schema.Attribute.String;
+    feedback: Schema.Attribute.Relation<'oneToOne', 'api::feedback.feedback'>;
+    main_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    subtext: Schema.Attribute.String;
+  };
+}
+
 export interface HeadersHeader4 extends Struct.ComponentSchema {
   collectionName: 'components_headers_header_4s';
   info: {
@@ -279,6 +303,22 @@ export interface HeadersHeader4 extends Struct.ComponentSchema {
     right_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+  };
+}
+
+export interface HeadersHeaderText extends Struct.ComponentSchema {
+  collectionName: 'components_headers_header_texts';
+  info: {
+    displayName: 'Header Text';
+    icon: 'discuss';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'common.button', true>;
+    description: Schema.Attribute.String;
+    headline: Schema.Attribute.String;
+    module_class: Schema.Attribute.String;
+    module_iid: Schema.Attribute.String;
+    pre_headline: Schema.Attribute.String;
   };
 }
 
@@ -492,7 +532,9 @@ declare module '@strapi/strapi' {
       'features.alternating-cards': FeaturesAlternatingCards;
       'features.feature-blocks': FeaturesFeatureBlocks;
       'features.feature-icon-list': FeaturesFeatureIconList;
+      'forms.contact-1': FormsContact1;
       'headers.header-4': HeadersHeader4;
+      'headers.header-text': HeadersHeaderText;
       'headers.hero-10': HeadersHero10;
       'headers.hero-4': HeadersHero4;
       'shared.image-slider': SharedImageSlider;

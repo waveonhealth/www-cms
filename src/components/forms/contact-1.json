@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_forms_contact_1s",
+  "info": {
+    "displayName": "Contact 1",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "main_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "feedback": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feedback.feedback"
+    },
+    "description": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.button"
+    },
+    "subtext": {
+      "type": "string"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}
