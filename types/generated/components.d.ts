@@ -218,14 +218,18 @@ export interface Features5Features extends Struct.ComponentSchema {
 export interface FeaturesAlternatingCards extends Struct.ComponentSchema {
   collectionName: 'components_features_alternating_cards';
   info: {
+    description: '';
     displayName: 'Alternating Cards';
     icon: 'bulletList';
   };
   attributes: {
     benefits: Schema.Attribute.Component<'common.image-cards', true>;
     buttons: Schema.Attribute.Component<'common.button', true>;
+    description: Schema.Attribute.String;
+    headline: Schema.Attribute.String;
     module_class: Schema.Attribute.String;
     module_id: Schema.Attribute.String;
+    pre_headline: Schema.Attribute.String;
     subtext: Schema.Attribute.String;
   };
 }

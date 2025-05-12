@@ -22,6 +22,11 @@
         "blog.blog-slider-1",
         "ctas.cta-centered-buttons"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }
