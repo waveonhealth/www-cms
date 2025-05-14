@@ -1,7 +1,8 @@
 {
   "collectionName": "components_common_buttons",
   "info": {
-    "displayName": "Button"
+    "displayName": "Button",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -19,6 +20,28 @@
     },
     "button_class": {
       "type": "string"
+    },
+    "button_style": {
+      "type": "enumeration",
+      "enum": [
+        "green-back-white-text",
+        "white-back-green-text-boxed",
+        "lightgreen-back-black-text",
+        "green-text-arrow",
+        "black-back-white-text",
+        "grey-outline-black-text",
+        "green-outline-green-text-transparent"
+      ]
+    },
+    "button_icon": {
+      "type": "string"
+    },
+    "button_icon_position": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ]
     }
   }
 }

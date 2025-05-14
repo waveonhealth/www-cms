@@ -21,11 +21,25 @@ export interface BlogBlogSlider1 extends Struct.ComponentSchema {
 export interface CommonButton extends Struct.ComponentSchema {
   collectionName: 'components_common_buttons';
   info: {
+    description: '';
     displayName: 'Button';
   };
   attributes: {
     button_class: Schema.Attribute.String;
+    button_icon: Schema.Attribute.String;
+    button_icon_position: Schema.Attribute.Enumeration<['left', 'right']>;
     button_id: Schema.Attribute.String;
+    button_style: Schema.Attribute.Enumeration<
+      [
+        'green-back-white-text',
+        'white-back-green-text-boxed',
+        'lightgreen-back-black-text',
+        'green-text-arrow',
+        'black-back-white-text',
+        'grey-outline-black-text',
+        'green-outline-green-text-transparent',
+      ]
+    >;
     caption: Schema.Attribute.String;
     is_active: Schema.Attribute.Boolean;
     link: Schema.Attribute.String;
