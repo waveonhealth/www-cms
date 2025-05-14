@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_features_key_feature_cards",
+  "info": {
+    "displayName": "Key Feature Cards",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "features": {
+      "displayName": "Key Feature Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.key-feature-card"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

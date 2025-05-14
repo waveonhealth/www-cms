@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_features_stacked_feature_cards",
+  "info": {
+    "displayName": "Stacked Feature Cards",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.feature-image-card-3"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

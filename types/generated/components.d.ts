@@ -78,6 +78,23 @@ export interface CommonFeatureImageCard2 extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonFeatureImageCard3 extends Struct.ComponentSchema {
+  collectionName: 'components_common_feature_image_card_3s';
+  info: {
+    description: '';
+    displayName: 'Feature Image Card 3';
+    icon: 'bulletList';
+  };
+  attributes: {
+    card_id: Schema.Attribute.String;
+    cardimage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    description: Schema.Attribute.String;
+    feedback: Schema.Attribute.Relation<'oneToOne', 'api::feedback.feedback'>;
+    headline: Schema.Attribute.String;
+    link: Schema.Attribute.Component<'common.button', false>;
+  };
+}
+
 export interface CommonIconCards extends Struct.ComponentSchema {
   collectionName: 'components_common_icon_cards';
   info: {
@@ -268,6 +285,34 @@ export interface FeaturesFeatureIconList extends Struct.ComponentSchema {
   };
 }
 
+export interface FeaturesKeyFeatureCards extends Struct.ComponentSchema {
+  collectionName: 'components_features_key_feature_cards';
+  info: {
+    displayName: 'Key Feature Cards';
+    icon: 'bulletList';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    features: Schema.Attribute.Component<'shared.key-feature-card', true>;
+    headline: Schema.Attribute.String;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+  };
+}
+
+export interface FeaturesStackedFeatureCards extends Struct.ComponentSchema {
+  collectionName: 'components_features_stacked_feature_cards';
+  info: {
+    displayName: 'Stacked Feature Cards';
+    icon: 'bulletList';
+  };
+  attributes: {
+    features: Schema.Attribute.Component<'common.feature-image-card-3', true>;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+  };
+}
+
 export interface FormsContact1 extends Struct.ComponentSchema {
   collectionName: 'components_forms_contact_1s';
   info: {
@@ -367,6 +412,22 @@ export interface HeadersHero4 extends Struct.ComponentSchema {
   };
 }
 
+export interface PricingPricing1 extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_pricing_1s';
+  info: {
+    displayName: 'Pricing 1';
+    icon: 'bulletList';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    footer_text: Schema.Attribute.String;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    options: Schema.Attribute.Component<'shared.pricing-card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedImageSlider extends Struct.ComponentSchema {
   collectionName: 'components_shared_image_sliders';
   info: {
@@ -381,6 +442,35 @@ export interface SharedImageSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedKeyFeatureCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_key_feature_cards';
+  info: {
+    displayName: 'Key Feature Card';
+    icon: 'apps';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    link: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedLogoLinks extends Struct.ComponentSchema {
+  collectionName: 'components_shared_logo_links';
+  info: {
+    displayName: 'Logo Links';
+    icon: 'bulletList';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -389,6 +479,32 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+  };
+}
+
+export interface SharedPricingCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_pricing_cards';
+  info: {
+    displayName: 'Pricing Card';
+    icon: 'bulletList';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'common.button', false>;
+    button_subtext: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    features: Schema.Attribute.Text;
+    features_title: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    month_price: Schema.Attribute.Decimal;
+    price_description: Schema.Attribute.String;
+    price_month_title: Schema.Attribute.String;
+    price_year_title: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
+    tag_color: Schema.Attribute.Enumeration<
+      ['green', 'beige', 'white', 'black']
+    >;
+    title: Schema.Attribute.String;
+    year_price: Schema.Attribute.Decimal;
   };
 }
 
@@ -501,6 +617,23 @@ export interface TestimonialsSingleFeedbackImage
   };
 }
 
+export interface TestimonialsTestimonialImageSlider
+  extends Struct.ComponentSchema {
+  collectionName: 'components_testimonials_testimonial_image_sliders';
+  info: {
+    displayName: 'Testimonial Image Slider';
+    icon: 'bulletList';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    feedbacks: Schema.Attribute.Relation<'oneToMany', 'api::feedback.feedback'>;
+    footer_text: Schema.Attribute.String;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface TestimonialsTestimonialSlider1 extends Struct.ComponentSchema {
   collectionName: 'components_testimonials_testimonial_slider_1s';
   info: {
@@ -517,6 +650,22 @@ export interface TestimonialsTestimonialSlider1 extends Struct.ComponentSchema {
   };
 }
 
+export interface TestimonialsTrustedBy extends Struct.ComponentSchema {
+  collectionName: 'components_testimonials_trusted_bies';
+  info: {
+    displayName: 'Trusted By';
+    icon: 'apps';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    footer_text: Schema.Attribute.String;
+    headline: Schema.Attribute.String;
+    logos: Schema.Attribute.Component<'shared.logo-links', true>;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -525,6 +674,7 @@ declare module '@strapi/strapi' {
       'common.faq-list': CommonFaqList;
       'common.feature-image-card': CommonFeatureImageCard;
       'common.feature-image-card-2': CommonFeatureImageCard2;
+      'common.feature-image-card-3': CommonFeatureImageCard3;
       'common.icon-cards': CommonIconCards;
       'common.icon-tags': CommonIconTags;
       'common.image-cards': CommonImageCards;
@@ -536,13 +686,19 @@ declare module '@strapi/strapi' {
       'features.alternating-cards': FeaturesAlternatingCards;
       'features.feature-blocks': FeaturesFeatureBlocks;
       'features.feature-icon-list': FeaturesFeatureIconList;
+      'features.key-feature-cards': FeaturesKeyFeatureCards;
+      'features.stacked-feature-cards': FeaturesStackedFeatureCards;
       'forms.contact-1': FormsContact1;
       'headers.header-4': HeadersHeader4;
       'headers.header-text': HeadersHeaderText;
       'headers.hero-10': HeadersHero10;
       'headers.hero-4': HeadersHero4;
+      'pricing.pricing-1': PricingPricing1;
       'shared.image-slider': SharedImageSlider;
+      'shared.key-feature-card': SharedKeyFeatureCard;
+      'shared.logo-links': SharedLogoLinks;
       'shared.media': SharedMedia;
+      'shared.pricing-card': SharedPricingCard;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
@@ -551,7 +707,9 @@ declare module '@strapi/strapi' {
       'shared.stats': SharedStats;
       'testimonials.single-feedback': TestimonialsSingleFeedback;
       'testimonials.single-feedback-image': TestimonialsSingleFeedbackImage;
+      'testimonials.testimonial-image-slider': TestimonialsTestimonialImageSlider;
       'testimonials.testimonial-slider-1': TestimonialsTestimonialSlider1;
+      'testimonials.trusted-by': TestimonialsTrustedBy;
     }
   }
 }

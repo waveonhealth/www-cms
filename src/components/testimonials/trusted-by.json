@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_testimonials_trusted_bies",
+  "info": {
+    "displayName": "Trusted By",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "logos": {
+      "displayName": "Logo Links",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.logo-links"
+    },
+    "footer_text": {
+      "type": "string"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

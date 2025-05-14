@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "organizations",
+  "info": {
+    "singularName": "organization",
+    "pluralName": "organizations",
+    "displayName": "Organization",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "dynamiczone",
+      "components": [
+        "headers.hero-10",
+        "shared.social-proof",
+        "features.stacked-feature-cards",
+        "features.key-feature-cards",
+        "pricing.pricing-1",
+        "testimonials.testimonial-image-slider",
+        "testimonials.trusted-by",
+        "blog.blog-slider-1",
+        "ctas.cta-centered-buttons"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

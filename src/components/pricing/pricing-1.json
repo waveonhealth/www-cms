@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_pricing_pricing_1s",
+  "info": {
+    "displayName": "Pricing 1",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.pricing-card",
+      "required": false
+    },
+    "footer_text": {
+      "type": "string"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

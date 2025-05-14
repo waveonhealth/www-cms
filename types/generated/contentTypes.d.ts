@@ -590,6 +590,7 @@ export interface ApiFeedbackFeedback extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     quote: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -652,6 +653,48 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'features.5-features',
         'features.feature-blocks',
         'testimonials.testimonial-slider-1',
+        'blog.blog-slider-1',
+        'ctas.cta-centered-buttons',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOrganizationOrganization extends Struct.SingleTypeSchema {
+  collectionName: 'organizations';
+  info: {
+    description: '';
+    displayName: 'Organization';
+    pluralName: 'organizations';
+    singularName: 'organization';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::organization.organization'
+    > &
+      Schema.Attribute.Private;
+    page: Schema.Attribute.DynamicZone<
+      [
+        'headers.hero-10',
+        'shared.social-proof',
+        'features.stacked-feature-cards',
+        'features.key-feature-cards',
+        'pricing.pricing-1',
+        'testimonials.testimonial-image-slider',
+        'testimonials.trusted-by',
         'blog.blog-slider-1',
         'ctas.cta-centered-buttons',
       ]
@@ -1268,6 +1311,7 @@ declare module '@strapi/strapi' {
       'api::feedback.feedback': ApiFeedbackFeedback;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::organization.organization': ApiOrganizationOrganization;
       'api::privacy.privacy': ApiPrivacyPrivacy;
       'api::question.question': ApiQuestionQuestion;
       'api::terms-of-use.terms-of-use': ApiTermsOfUseTermsOfUse;

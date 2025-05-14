@@ -1,0 +1,67 @@
+{
+  "collectionName": "components_shared_pricing_cards",
+  "info": {
+    "displayName": "Pricing Card",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "tag_color": {
+      "type": "enumeration",
+      "enum": [
+        "green",
+        "beige",
+        "white",
+        "black"
+      ]
+    },
+    "month_price": {
+      "type": "decimal"
+    },
+    "year_price": {
+      "type": "decimal"
+    },
+    "price_description": {
+      "type": "string"
+    },
+    "price_month_title": {
+      "type": "string"
+    },
+    "price_year_title": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.button"
+    },
+    "features_title": {
+      "type": "string"
+    },
+    "features": {
+      "type": "text"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "button_subtext": {
+      "type": "string"
+    }
+  }
+}
