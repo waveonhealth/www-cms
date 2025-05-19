@@ -20,7 +20,8 @@
         "features.alternating-cards",
         "testimonials.single-feedback",
         "features.feature-icon-list",
-        "common.faq-list"
+        "common.faq-list",
+        "testimonials.testimonial-image-slider"
       ]
     },
     "seo": {

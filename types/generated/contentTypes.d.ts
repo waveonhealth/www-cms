@@ -439,6 +439,7 @@ export interface ApiAthleteAthlete extends Struct.SingleTypeSchema {
         'testimonials.single-feedback',
         'features.feature-icon-list',
         'common.faq-list',
+        'testimonials.testimonial-image-slider',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
