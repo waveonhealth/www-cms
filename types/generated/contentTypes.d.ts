@@ -529,6 +529,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
 export interface ApiBlogBlog extends Struct.SingleTypeSchema {
   collectionName: 'blogs';
   info: {
+    description: '';
     displayName: 'Blog';
     pluralName: 'blogs';
     singularName: 'blog';
@@ -548,6 +549,9 @@ export interface ApiBlogBlog extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
+    newsletter_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     title: Schema.Attribute.String;
@@ -762,6 +766,7 @@ export interface ApiOrganizationOrganization extends Struct.SingleTypeSchema {
         'testimonials.trusted-by',
         'blog.blog-slider-1',
         'ctas.cta-centered-buttons',
+        'common.faq-list',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;

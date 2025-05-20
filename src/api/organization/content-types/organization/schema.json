@@ -23,7 +23,8 @@
         "testimonials.testimonial-image-slider",
         "testimonials.trusted-by",
         "blog.blog-slider-1",
-        "ctas.cta-centered-buttons"
+        "ctas.cta-centered-buttons",
+        "common.faq-list"
       ]
     },
     "seo": {
