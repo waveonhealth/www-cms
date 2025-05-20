@@ -835,6 +835,53 @@ export interface ApiQuestionQuestion extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiRegistrationAccountTypeRegistrationAccountType
+  extends Struct.SingleTypeSchema {
+  collectionName: 'registration_account_types';
+  info: {
+    displayName: 'Registration - Account Type';
+    pluralName: 'registration-account-types';
+    singularName: 'registration-account-type';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    at_button: Schema.Attribute.String;
+    at_description: Schema.Attribute.Text;
+    at_headline: Schema.Attribute.String;
+    at_image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    athlete_button: Schema.Attribute.String;
+    athlete_description: Schema.Attribute.Text;
+    athlete_headline: Schema.Attribute.String;
+    athlete_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    headline: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::registration-account-type.registration-account-type'
+    > &
+      Schema.Attribute.Private;
+    org_button: Schema.Attribute.String;
+    org_description: Schema.Attribute.Text;
+    org_headline: Schema.Attribute.String;
+    org_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTermsOfUseTermsOfUse extends Struct.SingleTypeSchema {
   collectionName: 'terms_of_uses';
   info: {
@@ -1386,6 +1433,7 @@ declare module '@strapi/strapi' {
       'api::organization.organization': ApiOrganizationOrganization;
       'api::privacy.privacy': ApiPrivacyPrivacy;
       'api::question.question': ApiQuestionQuestion;
+      'api::registration-account-type.registration-account-type': ApiRegistrationAccountTypeRegistrationAccountType;
       'api::terms-of-use.terms-of-use': ApiTermsOfUseTermsOfUse;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

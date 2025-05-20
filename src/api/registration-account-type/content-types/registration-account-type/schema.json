@@ -1,0 +1,78 @@
+{
+  "kind": "singleType",
+  "collectionName": "registration_account_types",
+  "info": {
+    "singularName": "registration-account-type",
+    "pluralName": "registration-account-types",
+    "displayName": "Registration - Account Type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "at_headline": {
+      "type": "string"
+    },
+    "at_description": {
+      "type": "text"
+    },
+    "athlete_headline": {
+      "type": "string"
+    },
+    "athlete_description": {
+      "type": "text"
+    },
+    "org_headline": {
+      "type": "string"
+    },
+    "org_description": {
+      "type": "text"
+    },
+    "at_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "athlete_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "org_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "at_button": {
+      "type": "string"
+    },
+    "athlete_button": {
+      "type": "string"
+    },
+    "org_button": {
+      "type": "string"
+    }
+  }
+}
