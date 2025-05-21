@@ -927,8 +927,9 @@ export interface ApiRegistrationGettingStartedRegistrationGettingStarted
     draftAndPublish: true;
   };
   attributes: {
-    at_description: Schema.Attribute.String;
+    at_description: Schema.Attribute.Text;
     at_image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    at_steps: Schema.Attribute.Text;
     at_title: Schema.Attribute.String;
     athlete_description: Schema.Attribute.Text;
     athlete_image: Schema.Attribute.Media<
@@ -945,7 +946,7 @@ export interface ApiRegistrationGettingStartedRegistrationGettingStarted
       'api::registration-getting-started.registration-getting-started'
     > &
       Schema.Attribute.Private;
-    org_description: Schema.Attribute.String;
+    org_description: Schema.Attribute.Text;
     org_image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     org_steps: Schema.Attribute.Text;
     org_title: Schema.Attribute.String;

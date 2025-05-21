@@ -16,7 +16,7 @@
       "type": "string"
     },
     "at_description": {
-      "type": "string"
+      "type": "text"
     },
     "at_image": {
       "type": "media",
@@ -53,19 +53,23 @@
       "type": "string"
     },
     "org_description": {
-      "type": "string"
+      "type": "text"
     },
     "org_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "org_steps": {
+      "type": "text"
+    },
+    "at_steps": {
       "type": "text"
     }
   }
