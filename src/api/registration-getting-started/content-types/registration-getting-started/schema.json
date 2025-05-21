@@ -1,0 +1,72 @@
+{
+  "kind": "singleType",
+  "collectionName": "registration_getting_starteds",
+  "info": {
+    "singularName": "registration-getting-started",
+    "pluralName": "registration-getting-starteds",
+    "displayName": "Registration - Getting Started",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "at_title": {
+      "type": "string"
+    },
+    "at_description": {
+      "type": "string"
+    },
+    "at_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "athlete_title": {
+      "type": "string"
+    },
+    "athlete_description": {
+      "type": "text"
+    },
+    "athlete_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "athlete_steps": {
+      "type": "text"
+    },
+    "org_title": {
+      "type": "string"
+    },
+    "org_description": {
+      "type": "string"
+    },
+    "org_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "org_steps": {
+      "type": "text"
+    }
+  }
+}

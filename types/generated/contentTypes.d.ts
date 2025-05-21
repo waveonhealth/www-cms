@@ -882,6 +882,80 @@ export interface ApiRegistrationAccountTypeRegistrationAccountType
   };
 }
 
+export interface ApiRegistrationAtNdaRegistrationAtNda
+  extends Struct.SingleTypeSchema {
+  collectionName: 'registration_at_ndas';
+  info: {
+    displayName: 'Registration - AT - NDA';
+    pluralName: 'registration-at-ndas';
+    singularName: 'registration-at-nda';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    button_caption: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::registration-at-nda.registration-at-nda'
+    > &
+      Schema.Attribute.Private;
+    ndatext: Schema.Attribute.RichText;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiRegistrationGettingStartedRegistrationGettingStarted
+  extends Struct.SingleTypeSchema {
+  collectionName: 'registration_getting_starteds';
+  info: {
+    description: '';
+    displayName: 'Registration - Getting Started';
+    pluralName: 'registration-getting-starteds';
+    singularName: 'registration-getting-started';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    at_description: Schema.Attribute.String;
+    at_image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    at_title: Schema.Attribute.String;
+    athlete_description: Schema.Attribute.Text;
+    athlete_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    athlete_steps: Schema.Attribute.Text;
+    athlete_title: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::registration-getting-started.registration-getting-started'
+    > &
+      Schema.Attribute.Private;
+    org_description: Schema.Attribute.String;
+    org_image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    org_steps: Schema.Attribute.Text;
+    org_title: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTermsOfUseTermsOfUse extends Struct.SingleTypeSchema {
   collectionName: 'terms_of_uses';
   info: {
@@ -1434,6 +1508,8 @@ declare module '@strapi/strapi' {
       'api::privacy.privacy': ApiPrivacyPrivacy;
       'api::question.question': ApiQuestionQuestion;
       'api::registration-account-type.registration-account-type': ApiRegistrationAccountTypeRegistrationAccountType;
+      'api::registration-at-nda.registration-at-nda': ApiRegistrationAtNdaRegistrationAtNda;
+      'api::registration-getting-started.registration-getting-started': ApiRegistrationGettingStartedRegistrationGettingStarted;
       'api::terms-of-use.terms-of-use': ApiTermsOfUseTermsOfUse;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
