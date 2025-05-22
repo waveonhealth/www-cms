@@ -164,11 +164,14 @@ export interface CommonImageCards extends Struct.ComponentSchema {
 export interface Ctas3StepWCta extends Struct.ComponentSchema {
   collectionName: 'components_ctas_3_step_w_ctas';
   info: {
+    description: '';
     displayName: '3 Step wCTA';
     icon: 'bulletList';
   };
   attributes: {
     buttons: Schema.Attribute.Component<'common.button', true>;
+    description: Schema.Attribute.Text;
+    headline: Schema.Attribute.String;
     module_class: Schema.Attribute.String;
     module_id: Schema.Attribute.String;
     steps: Schema.Attribute.Component<'common.icon-cards', true>;
