@@ -778,6 +778,65 @@ export interface ApiOrganizationOrganization extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPagePage extends Struct.CollectionTypeSchema {
+  collectionName: 'pages';
+  info: {
+    description: '';
+    displayName: 'pages';
+    pluralName: 'pages';
+    singularName: 'page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
+      Schema.Attribute.Private;
+    modules: Schema.Attribute.DynamicZone<
+      [
+        'blog.blog-slider-1',
+        'common.faq-list',
+        'ctas.3-step-w-cta',
+        'ctas.cta-centered-buttons',
+        'ctas.cta-stacked-buttons',
+        'facts.facts-1',
+        'testimonials.trusted-by',
+        'testimonials.testimonial-slider-1',
+        'testimonials.testimonial-image-slider',
+        'testimonials.single-feedback',
+        'testimonials.single-feedback-image',
+        'pricing.pricing-1',
+        'headers.hero-4',
+        'headers.hero-10',
+        'headers.header-text',
+        'headers.header-4',
+        'features.stacked-feature-cards',
+        'features.key-feature-cards',
+        'features.feature-icon-list',
+        'features.feature-blocks',
+        'features.alternating-cards',
+        'features.5-features',
+      ]
+    >;
+    page_title: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url_slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 3;
+      }>;
+  };
+}
+
 export interface ApiPrivacyPrivacy extends Struct.SingleTypeSchema {
   collectionName: 'privacies';
   info: {
@@ -1507,6 +1566,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::organization.organization': ApiOrganizationOrganization;
+      'api::page.page': ApiPagePage;
       'api::privacy.privacy': ApiPrivacyPrivacy;
       'api::question.question': ApiQuestionQuestion;
       'api::registration-account-type.registration-account-type': ApiRegistrationAccountTypeRegistrationAccountType;

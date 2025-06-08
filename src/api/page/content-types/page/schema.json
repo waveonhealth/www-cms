@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "pages",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "modules": {
+      "type": "dynamiczone",
+      "components": [
+        "blog.blog-slider-1",
+        "common.faq-list",
+        "ctas.3-step-w-cta",
+        "ctas.cta-centered-buttons",
+        "ctas.cta-stacked-buttons",
+        "facts.facts-1",
+        "testimonials.trusted-by",
+        "testimonials.testimonial-slider-1",
+        "testimonials.testimonial-image-slider",
+        "testimonials.single-feedback",
+        "testimonials.single-feedback-image",
+        "pricing.pricing-1",
+        "headers.hero-4",
+        "headers.hero-10",
+        "headers.header-text",
+        "headers.header-4",
+        "features.stacked-feature-cards",
+        "features.key-feature-cards",
+        "features.feature-icon-list",
+        "features.feature-blocks",
+        "features.alternating-cards",
+        "features.5-features"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "page_title": {
+      "type": "string",
+      "required": true
+    },
+    "url_slug": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 3
+    }
+  }
+}
