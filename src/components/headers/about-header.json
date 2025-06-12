@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_headers_about_headers",
+  "info": {
+    "displayName": "About Header"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "image2": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

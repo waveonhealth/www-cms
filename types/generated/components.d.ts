@@ -161,6 +161,21 @@ export interface CommonImageCards extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonTeam extends Struct.ComponentSchema {
+  collectionName: 'components_common_teams';
+  info: {
+    description: '';
+    displayName: 'Team';
+  };
+  attributes: {
+    link: Schema.Attribute.Component<'common.button', false>;
+    members: Schema.Attribute.Component<'shared.team-members', true>;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface Ctas3StepWCta extends Struct.ComponentSchema {
   collectionName: 'components_ctas_3_step_w_ctas';
   info: {
@@ -240,6 +255,35 @@ export interface FactsFacts1 extends Struct.ComponentSchema {
   };
 }
 
+export interface FactsFacts2 extends Struct.ComponentSchema {
+  collectionName: 'components_facts_facts_2s';
+  info: {
+    description: '';
+    displayName: 'Facts 2';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'shared.stats', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FactsTimeline extends Struct.ComponentSchema {
+  collectionName: 'components_facts_timelines';
+  info: {
+    description: '';
+    displayName: 'Timeline';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'shared.timeline-items', true>;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface Features5Features extends Struct.ComponentSchema {
   collectionName: 'components_features_5_features';
   info: {
@@ -298,6 +342,20 @@ export interface FeaturesFeatureBlocks extends Struct.ComponentSchema {
     module_class: Schema.Attribute.String;
     module_id: Schema.Attribute.String;
     pre_headline: Schema.Attribute.String;
+  };
+}
+
+export interface FeaturesFeatureCards2Col extends Struct.ComponentSchema {
+  collectionName: 'components_features_feature_cards_2_cols';
+  info: {
+    displayName: 'Feature Cards 2Col';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'shared.feature-card', true>;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -361,6 +419,21 @@ export interface FormsContact1 extends Struct.ComponentSchema {
     module_class: Schema.Attribute.String;
     module_id: Schema.Attribute.String;
     subtext: Schema.Attribute.String;
+  };
+}
+
+export interface HeadersAboutHeader extends Struct.ComponentSchema {
+  collectionName: 'components_headers_about_headers';
+  info: {
+    displayName: 'About Header';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -472,6 +545,19 @@ export interface PricingPricing4Col extends Struct.ComponentSchema {
     module_class: Schema.Attribute.String;
     module_id: Schema.Attribute.String;
     options: Schema.Attribute.Component<'shared.pricing-card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFeatureCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_feature_cards';
+  info: {
+    displayName: 'feature-card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -626,12 +712,38 @@ export interface SharedSocialProof extends Struct.ComponentSchema {
 export interface SharedStats extends Struct.ComponentSchema {
   collectionName: 'components_shared_stats';
   info: {
+    description: '';
     displayName: 'Stats';
     icon: 'bulletList';
   };
   attributes: {
     statistic: Schema.Attribute.String;
     subtext: Schema.Attribute.String;
+    suffix: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTeamMembers extends Struct.ComponentSchema {
+  collectionName: 'components_shared_team_members';
+  info: {
+    displayName: 'team-members';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTimelineItems extends Struct.ComponentSchema {
+  collectionName: 'components_shared_timeline_items';
+  info: {
+    displayName: 'timeline-items';
+  };
+  attributes: {
+    caption: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -726,24 +838,30 @@ declare module '@strapi/strapi' {
       'common.icon-cards': CommonIconCards;
       'common.icon-tags': CommonIconTags;
       'common.image-cards': CommonImageCards;
+      'common.team': CommonTeam;
       'ctas.3-step-w-cta': Ctas3StepWCta;
       'ctas.cta-centered-buttons': CtasCtaCenteredButtons;
       'ctas.cta-image': CtasCtaImage;
       'ctas.cta-stacked-buttons': CtasCtaStackedButtons;
       'facts.facts-1': FactsFacts1;
+      'facts.facts-2': FactsFacts2;
+      'facts.timeline': FactsTimeline;
       'features.5-features': Features5Features;
       'features.alternating-cards': FeaturesAlternatingCards;
       'features.feature-blocks': FeaturesFeatureBlocks;
+      'features.feature-cards-2-col': FeaturesFeatureCards2Col;
       'features.feature-icon-list': FeaturesFeatureIconList;
       'features.key-feature-cards': FeaturesKeyFeatureCards;
       'features.stacked-feature-cards': FeaturesStackedFeatureCards;
       'forms.contact-1': FormsContact1;
+      'headers.about-header': HeadersAboutHeader;
       'headers.header-4': HeadersHeader4;
       'headers.header-text': HeadersHeaderText;
       'headers.hero-10': HeadersHero10;
       'headers.hero-4': HeadersHero4;
       'pricing.pricing-1': PricingPricing1;
       'pricing.pricing-4-col': PricingPricing4Col;
+      'shared.feature-card': SharedFeatureCard;
       'shared.image-slider': SharedImageSlider;
       'shared.key-feature-card': SharedKeyFeatureCard;
       'shared.logo-links': SharedLogoLinks;
@@ -755,6 +873,8 @@ declare module '@strapi/strapi' {
       'shared.slider': SharedSlider;
       'shared.social-proof': SharedSocialProof;
       'shared.stats': SharedStats;
+      'shared.team-members': SharedTeamMembers;
+      'shared.timeline-items': SharedTimelineItems;
       'testimonials.single-feedback': TestimonialsSingleFeedback;
       'testimonials.single-feedback-image': TestimonialsSingleFeedbackImage;
       'testimonials.testimonial-image-slider': TestimonialsTestimonialImageSlider;

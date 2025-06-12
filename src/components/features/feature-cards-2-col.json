@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_features_feature_cards_2_cols",
+  "info": {
+    "displayName": "Feature Cards 2Col"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "features": {
+      "displayName": "feature-card",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature-card"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}

@@ -822,6 +822,11 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'features.5-features',
         'pricing.pricing-4-col',
         'ctas.cta-image',
+        'headers.about-header',
+        'facts.facts-2',
+        'features.feature-cards-2-col',
+        'facts.timeline',
+        'common.team',
       ]
     >;
     page_title: Schema.Attribute.String & Schema.Attribute.Required;

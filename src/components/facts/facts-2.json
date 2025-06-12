@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_facts_facts_2s",
+  "info": {
+    "displayName": "Facts 2",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stats"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    }
+  }
+}
