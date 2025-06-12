@@ -820,6 +820,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'features.feature-blocks',
         'features.alternating-cards',
         'features.5-features',
+        'pricing.pricing-4-col',
+        'ctas.cta-image',
       ]
     >;
     page_title: Schema.Attribute.String & Schema.Attribute.Required;

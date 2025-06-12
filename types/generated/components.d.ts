@@ -194,6 +194,21 @@ export interface CtasCtaCenteredButtons extends Struct.ComponentSchema {
   };
 }
 
+export interface CtasCtaImage extends Struct.ComponentSchema {
+  collectionName: 'components_ctas_cta_images';
+  info: {
+    displayName: 'CTA Image';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'common.button', false>;
+    button_footer_text: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CtasCtaStackedButtons extends Struct.ComponentSchema {
   collectionName: 'components_ctas_cta_stacked_buttons';
   info: {
@@ -434,6 +449,22 @@ export interface PricingPricing1 extends Struct.ComponentSchema {
   info: {
     displayName: 'Pricing 1';
     icon: 'bulletList';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    footer_text: Schema.Attribute.String;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    options: Schema.Attribute.Component<'shared.pricing-card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PricingPricing4Col extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_pricing_4_cols';
+  info: {
+    description: '';
+    displayName: 'Pricing 4 Col';
   };
   attributes: {
     description: Schema.Attribute.String;
@@ -697,6 +728,7 @@ declare module '@strapi/strapi' {
       'common.image-cards': CommonImageCards;
       'ctas.3-step-w-cta': Ctas3StepWCta;
       'ctas.cta-centered-buttons': CtasCtaCenteredButtons;
+      'ctas.cta-image': CtasCtaImage;
       'ctas.cta-stacked-buttons': CtasCtaStackedButtons;
       'facts.facts-1': FactsFacts1;
       'features.5-features': Features5Features;
@@ -711,6 +743,7 @@ declare module '@strapi/strapi' {
       'headers.hero-10': HeadersHero10;
       'headers.hero-4': HeadersHero4;
       'pricing.pricing-1': PricingPricing1;
+      'pricing.pricing-4-col': PricingPricing4Col;
       'shared.image-slider': SharedImageSlider;
       'shared.key-feature-card': SharedKeyFeatureCard;
       'shared.logo-links': SharedLogoLinks;

@@ -36,7 +36,9 @@
         "features.feature-icon-list",
         "features.feature-blocks",
         "features.alternating-cards",
-        "features.5-features"
+        "features.5-features",
+        "pricing.pricing-4-col",
+        "ctas.cta-image"
       ]
     },
     "seo": {

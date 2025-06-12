@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_pricing_pricing_4_cols",
+  "info": {
+    "displayName": "Pricing 4 Col",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "footer_text": {
+      "type": "string"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.pricing-card"
+    }
+  }
+}
