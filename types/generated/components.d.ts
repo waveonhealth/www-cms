@@ -161,6 +161,22 @@ export interface CommonImageCards extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonOffsetImage extends Struct.ComponentSchema {
+  collectionName: 'components_common_offset_images';
+  info: {
+    description: '';
+    displayName: 'Offset Image';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'common.button', false>;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    module_class: Schema.Attribute.String;
+    module_id: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CommonTeam extends Struct.ComponentSchema {
   collectionName: 'components_common_teams';
   info: {
@@ -838,6 +854,7 @@ declare module '@strapi/strapi' {
       'common.icon-cards': CommonIconCards;
       'common.icon-tags': CommonIconTags;
       'common.image-cards': CommonImageCards;
+      'common.offset-image': CommonOffsetImage;
       'common.team': CommonTeam;
       'ctas.3-step-w-cta': Ctas3StepWCta;
       'ctas.cta-centered-buttons': CtasCtaCenteredButtons;

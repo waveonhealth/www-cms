@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_common_offset_images",
+  "info": {
+    "displayName": "Offset Image",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.button"
+    }
+  }
+}

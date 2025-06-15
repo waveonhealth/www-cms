@@ -862,6 +862,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'features.feature-cards-2-col',
         'facts.timeline',
         'common.team',
+        'common.offset-image',
       ]
     >;
     page_title: Schema.Attribute.String & Schema.Attribute.Required;
