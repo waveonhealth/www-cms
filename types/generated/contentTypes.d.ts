@@ -483,6 +483,7 @@ export interface ApiAthleticTrainerAthleticTrainer
         'common.faq-list',
         'blog.blog-slider-1',
         'ctas.cta-centered-buttons',
+        'ctas.3-step-w-cta',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
@@ -729,6 +730,40 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOrganizationLandingPageOrganizationLandingPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'organization_landing_pages';
+  info: {
+    description: '';
+    displayName: 'Organization Landing Page';
+    pluralName: 'organization-landing-pages';
+    singularName: 'organization-landing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    default_message: Schema.Attribute.Text;
+    default_pricing_description: Schema.Attribute.Text;
+    default_pricing_headline: Schema.Attribute.String;
+    faqs: Schema.Attribute.Component<'common.faq-list', true>;
+    headline: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::organization-landing-page.organization-landing-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1572,6 +1607,7 @@ declare module '@strapi/strapi' {
       'api::feedback.feedback': ApiFeedbackFeedback;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::organization-landing-page.organization-landing-page': ApiOrganizationLandingPageOrganizationLandingPage;
       'api::organization.organization': ApiOrganizationOrganization;
       'api::page.page': ApiPagePage;
       'api::privacy.privacy': ApiPrivacyPrivacy;

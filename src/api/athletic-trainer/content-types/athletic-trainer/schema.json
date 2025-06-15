@@ -22,7 +22,8 @@
         "testimonials.single-feedback-image",
         "common.faq-list",
         "blog.blog-slider-1",
-        "ctas.cta-centered-buttons"
+        "ctas.cta-centered-buttons",
+        "ctas.3-step-w-cta"
       ]
     },
     "seo": {

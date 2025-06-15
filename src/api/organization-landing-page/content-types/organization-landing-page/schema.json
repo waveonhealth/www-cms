@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "organization_landing_pages",
+  "info": {
+    "singularName": "organization-landing-page",
+    "pluralName": "organization-landing-pages",
+    "displayName": "Organization Landing Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "default_message": {
+      "type": "text"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.faq-list"
+    },
+    "default_pricing_headline": {
+      "type": "string"
+    },
+    "default_pricing_description": {
+      "type": "text"
+    }
+  }
+}
