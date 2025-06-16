@@ -171,8 +171,10 @@ export interface CommonOffsetImage extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'common.button', false>;
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imagewidth: Schema.Attribute.Integer;
     module_class: Schema.Attribute.String;
     module_id: Schema.Attribute.String;
+    showbackground: Schema.Attribute.Boolean;
     title: Schema.Attribute.String;
   };
 }
