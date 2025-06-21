@@ -484,6 +484,7 @@ export interface ApiAthleticTrainerAthleticTrainer
         'blog.blog-slider-1',
         'ctas.cta-centered-buttons',
         'ctas.3-step-w-cta',
+        'testimonials.testimonial-image-slider',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
