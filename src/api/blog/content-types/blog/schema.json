@@ -29,14 +29,29 @@
       "component": "shared.seo"
     },
     "newsletter_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "newsletter_title": {
+      "type": "string"
+    },
+    "newsletter_subtext": {
+      "type": "string"
+    },
+    "newletter_button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.button"
+    },
+    "newsletter_description": {
+      "type": "string"
     }
   }
 }

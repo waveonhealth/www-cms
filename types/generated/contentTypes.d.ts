@@ -551,9 +551,13 @@ export interface ApiBlogBlog extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
+    newletter_button: Schema.Attribute.Component<'common.button', false>;
+    newsletter_description: Schema.Attribute.String;
     newsletter_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    newsletter_subtext: Schema.Attribute.String;
+    newsletter_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     title: Schema.Attribute.String;
