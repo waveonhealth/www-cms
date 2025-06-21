@@ -744,10 +744,12 @@ export interface SharedStats extends Struct.ComponentSchema {
 export interface SharedTeamMembers extends Struct.ComponentSchema {
   collectionName: 'components_shared_team_members';
   info: {
+    description: '';
     displayName: 'team-members';
   };
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    linkedin_url: Schema.Attribute.String;
     name: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
